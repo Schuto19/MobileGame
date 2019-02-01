@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterScript : MonoBehaviour
 {
     public float Speed;
+    public int Damage;
     GameObject Target;
 
     // Start is called before the first frame update
