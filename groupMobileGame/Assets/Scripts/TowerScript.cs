@@ -8,6 +8,7 @@ public class TowerScript : MonoBehaviour
     float DamagedDelay;
     public GameObject DeathEffect;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +30,8 @@ public class TowerScript : MonoBehaviour
         if (DamagedDelay <= 0 && Health > 1)
         {
             Health -= collision.gameObject.GetComponent<MonsterScript>().Damage;
-            for(int i = 0; i < collision.gameObject.GetComponent<MonsterScript>().Damage; i++)
-            {
-                GetComponent<ParticleSystem>().Play();
-            }
+            GetComponent<ParticleSystem>().emission.SetBursts(new ParticleSystem.Burst[]{new ParticleSystem.Burst(.1f, collision.gameObject.GetComponent<MonsterScript>().Damage * 5)});
+            GetComponent<ParticleSystem>().Play();
             DamagedDelay = 1;
         }
         if(DamagedDelay <= 0 && Health <= 1)

@@ -33,7 +33,13 @@ public class MonsterScript : MonoBehaviour
 
         }
 
-
-        GetComponent<Rigidbody2D>().velocity = (Target.transform.position - transform.position).normalized * Speed;
+        if(Towers.Length > 0)
+        {
+            GetComponent<Rigidbody2D>().velocity = (Target.transform.position - transform.position).normalized * Speed;
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().velocity = (GameObject.Find("EndGoal").transform.position - transform.position).normalized * Speed;
+        }
     }
 }
