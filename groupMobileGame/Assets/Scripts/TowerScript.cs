@@ -27,14 +27,14 @@ public class TowerScript : MonoBehaviour
         {
             DamagedDelay -= Time.deltaTime;
         }
-        if (DamagedDelay <= 0 && Health > 1)
+        if (DamagedDelay <= 0 && Health > collision.gameObject.GetComponent<MonsterScript>().Damage)
         {
             Health -= collision.gameObject.GetComponent<MonsterScript>().Damage;
             GetComponent<ParticleSystem>().emission.SetBursts(new ParticleSystem.Burst[]{new ParticleSystem.Burst(.1f, collision.gameObject.GetComponent<MonsterScript>().Damage * 5)});
             GetComponent<ParticleSystem>().Play();
             DamagedDelay = 1;
         }
-        if(DamagedDelay <= 0 && Health <= 1)
+        if(DamagedDelay <= 0 && Health <= collision.gameObject.GetComponent<MonsterScript>().Damage)
         {
             Instantiate(DeathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
