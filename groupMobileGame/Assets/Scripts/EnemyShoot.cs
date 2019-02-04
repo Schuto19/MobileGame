@@ -6,7 +6,6 @@ public class EnemyShoot : MonoBehaviour
 {
 
     public GameObject prefab;
-    public GameObject player;
     public float shootSpeed = 10;
     float timer = 0;
     public float shootTriggerDistance = 3.0f;
@@ -14,7 +13,7 @@ public class EnemyShoot : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     // Update is called once per frame
@@ -22,7 +21,7 @@ public class EnemyShoot : MonoBehaviour
     {
 
         timer += Time.deltaTime;
-        Vector3 playerPosition = player.transform.position;
+        Vector3 playerPosition = transform.position;
         //vector from enemy position to the players position
         Vector3 shootDirection = playerPosition - transform.position;
         if (shootDirection.magnitude < shootTriggerDistance && timer > 1.5f)

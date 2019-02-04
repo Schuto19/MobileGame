@@ -35,4 +35,8 @@ public class SpawningScript : MonoBehaviour
     {
         Instantiate(Monsters[3], SpawnPoint.transform.position, Quaternion.identity);
     }
+    public void Spawn4()
+    {
+        Instantiate(Monsters[4], SpawnPoint.transform.position, Quaternion.identity);
+    }
 }

@@ -7,6 +7,7 @@ TagManager:
   - Tower
   - Monster
   - Path
+  - TowerProjectile
   layers:
   - Default
   - TransparentFX

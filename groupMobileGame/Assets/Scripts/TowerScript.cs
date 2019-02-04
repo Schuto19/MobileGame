@@ -7,6 +7,8 @@ public class TowerScript : MonoBehaviour
     public int Health;
     float DamagedDelay;
     public GameObject DeathEffect;
+    public float AttackDelay = 3;
+    public GameObject Attack;
 
 
     // Start is called before the first frame update
@@ -18,7 +20,19 @@ public class TowerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        AttackDelay -= Time.deltaTime;
+        GameObject[] Monsters = GameObject.FindGameObjectsWithTag("Monster");
+        for(int i = 0; i < Monsters.Length; i++)
+        {
+            if((Monsters[i].transform.position - transform.position).magnitude < 5)
+            {
+                if(AttackDelay <= 0)
+                {
+                    Instantiate(Attack, transform.position, Quaternion.identity);
+                    AttackDelay = 3;
+                }
+            }
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
