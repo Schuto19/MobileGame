@@ -9,7 +9,7 @@ public class MenuBottons : MonoBehaviour {
     public void NewGame()
     {
         PlayerPrefs.SetInt("Lives", lives);
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("level1");
     }
 
     public void QuitGame()
@@ -19,6 +19,6 @@ public class MenuBottons : MonoBehaviour {
 
     public void Controls()
     {
-        SceneManager.LoadScene("Controls");
+        SceneManager.LoadScene("Options");
     }
 }
