@@ -6,7 +6,8 @@ public class MonsterScript : MonoBehaviour
 {
     public float Speed;
     public int Damage;
-    GameObject Target;
+    bool Attacking = false;
+    int Progress = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,29 +18,42 @@ public class MonsterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Attacking = false;
 
         GameObject[] Towers = GameObject.FindGameObjectsWithTag("Tower");
-        float ClosestRange = 1000;
+        float ClosestRange = 10f;
 
         for (int i = 0; i < Towers.Length; i++)
         {
             float Range = (Towers[i].transform.position - transform.position).magnitude;
             if (Range < ClosestRange)
             {
+                Attacking = true;
                 ClosestRange = Range;
-                Target = Towers[i];
+                GetComponent<Rigidbody2D>().velocity = (Towers[i].transform.position - transform.position).normalized * Speed;
             }
-
+            //if(Range > ClosestRange)
+            //{
+            //    Attacking = false;
+            //}
         }
 
-        if(Towers.Length > 0)
+        GameObject[] Path = GameObject.FindGameObjectsWithTag("Path");
+
+        if(!Attacking)
         {
-            GetComponent<Rigidbody2D>().velocity = (Target.transform.position - transform.position).normalized * Speed;
-        }
-        else
-        {
-            GetComponent<Rigidbody2D>().velocity = (GameObject.Find("EndGoal").transform.position - transform.position).normalized * Speed;
+            for (int i = 0; i < Path.Length; i++)
+            {
+                if(Path[i].GetComponent<PathScript>().PathPiece == Progress)
+                {
+                    GetComponent<Rigidbody2D>().velocity = (Path[i].transform.position - transform.position).normalized * Speed;
+
+                    if ((Path[i].transform.position - transform.position).magnitude < 3.9f)
+                    {
+                        Progress += 1;
+                    }
+                }
+            }
         }
     }
 }

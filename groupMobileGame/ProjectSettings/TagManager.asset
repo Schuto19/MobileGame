@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tower
   - Monster
+  - Path
   layers:
   - Default
   - TransparentFX

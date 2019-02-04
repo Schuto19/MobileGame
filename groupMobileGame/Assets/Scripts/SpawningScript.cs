@@ -5,11 +5,12 @@ using UnityEngine;
 public class SpawningScript : MonoBehaviour
 {
     public GameObject[] Monsters;
+    GameObject SpawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnPoint = GameObject.Find("MonsterSpawnPoint");
     }
 
     // Update is called once per frame
@@ -20,18 +21,18 @@ public class SpawningScript : MonoBehaviour
 
     public void Spawn0()
     {
-        Instantiate(Monsters[0], transform.position, Quaternion.identity);
+        Instantiate(Monsters[0], SpawnPoint.transform.position, Quaternion.identity);
     }
     public void Spawn1()
     {
-        Instantiate(Monsters[1], transform.position, Quaternion.identity);
+        Instantiate(Monsters[1], SpawnPoint.transform.position, Quaternion.identity);
     }
     public void Spawn2()
     {
-        Instantiate(Monsters[2], transform.position, Quaternion.identity);
+        Instantiate(Monsters[2], SpawnPoint.transform.position, Quaternion.identity);
     }
     public void Spawn3()
     {
-        Instantiate(Monsters[3], transform.position, Quaternion.identity);
+        Instantiate(Monsters[3], SpawnPoint.transform.position, Quaternion.identity);
     }
 }
