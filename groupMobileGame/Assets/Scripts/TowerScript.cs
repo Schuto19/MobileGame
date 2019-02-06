@@ -9,7 +9,6 @@ public class TowerScript : MonoBehaviour
     float DamagedDelay;
     public GameObject DeathEffect;
     public float AttackDelay = 3;
-    public float ChargeAttackDelay = 10;
     public GameObject Attack;
     public GameObject Attack2;
     public GameObject ChargeEffect;
@@ -38,17 +37,22 @@ public class TowerScript : MonoBehaviour
             }
             if ((Monsters[i].transform.position - transform.position).magnitude < 10 && Type == 1)
             {
-                ChargeAttackDelay -= Time.deltaTime;
-                ChargeEffect.GetComponent<ParticleSystem>().Play();
                 if (AttackDelay <= 0)
                 {
                     Instantiate(Attack, transform.position, Quaternion.identity);
                     AttackDelay = 10;
                 }
             }
-            else
+            if(Type == 1)
             {
-                ChargeEffect.GetComponent<ParticleSystem>().Stop();
+                if(AttackDelay >= 9.9f)
+                {
+                    ChargeEffect.GetComponent<ParticleSystem>().Play();
+                }
+                if(AttackDelay <= 0)
+                {
+                    ChargeEffect.GetComponent<ParticleSystem>().Stop();
+                }
             }
         }
     }
