@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class TowerScript : MonoBehaviour
 {
+    public int Type;
     public int Health;
     float DamagedDelay;
     public GameObject DeathEffect;
     public float AttackDelay = 3;
+    public float ChargeAttackDelay = 10;
     public GameObject Attack;
+    public GameObject Attack2;
+    public GameObject ChargeEffect;
 
 
     // Start is called before the first frame update
@@ -24,13 +28,27 @@ public class TowerScript : MonoBehaviour
         GameObject[] Monsters = GameObject.FindGameObjectsWithTag("Monster");
         for(int i = 0; i < Monsters.Length; i++)
         {
-            if((Monsters[i].transform.position - transform.position).magnitude < 5)
+            if((Monsters[i].transform.position - transform.position).magnitude < 5 && Type == 0)
             {
                 if(AttackDelay <= 0)
                 {
                     Instantiate(Attack, transform.position, Quaternion.identity);
                     AttackDelay = 3;
                 }
+            }
+            if ((Monsters[i].transform.position - transform.position).magnitude < 10 && Type == 1)
+            {
+                ChargeAttackDelay -= Time.deltaTime;
+                ChargeEffect.GetComponent<ParticleSystem>().Play();
+                if (AttackDelay <= 0)
+                {
+                    Instantiate(Attack, transform.position, Quaternion.identity);
+                    AttackDelay = 10;
+                }
+            }
+            else
+            {
+                ChargeEffect.GetComponent<ParticleSystem>().Stop();
             }
         }
     }
