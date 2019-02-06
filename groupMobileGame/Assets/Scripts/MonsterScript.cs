@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MonsterScript : MonoBehaviour
 {
+    public int Health;
     public float Speed;
     public int Damage;
     bool Attacking = false;
     int Progress = 0;
+    public GameObject DeathEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -32,10 +34,6 @@ public class MonsterScript : MonoBehaviour
                 ClosestRange = Range;
                 GetComponent<Rigidbody2D>().velocity = (Towers[i].transform.position - transform.position).normalized * Speed;
             }
-            //if(Range > ClosestRange)
-            //{
-            //    Attacking = false;
-            //}
         }
 
         GameObject[] Path = GameObject.FindGameObjectsWithTag("Path");
@@ -53,6 +51,24 @@ public class MonsterScript : MonoBehaviour
                         Progress += 1;
                     }
                 }
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "TowerProjectile")
+        {
+            Health -= collision.gameObject.GetComponent<ProjectileScript>().Damage;
+            if(Health > 0)
+            {
+                GetComponent<ParticleSystem>().emission.SetBursts(new ParticleSystem.Burst[] { new ParticleSystem.Burst(.1f, collision.gameObject.GetComponent<ProjectileScript>().Damage * 5) });
+                GetComponent<ParticleSystem>().Play();
+            }
+            else
+            {
+                Instantiate(DeathEffect, transform.position, Quaternion.identity);
+                Destroy(gameObject);
             }
         }
     }
