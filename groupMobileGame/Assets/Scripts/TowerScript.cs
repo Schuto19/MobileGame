@@ -51,6 +51,7 @@ public class TowerScript : MonoBehaviour
         if(DamagedDelay <= 0 && Health <= collision.gameObject.GetComponent<MonsterScript>().Damage)
         {
             Instantiate(DeathEffect, transform.position, Quaternion.identity);
+            GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency += 25;
             Destroy(gameObject);
         }
     }
