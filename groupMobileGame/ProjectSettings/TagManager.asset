@@ -8,6 +8,7 @@ TagManager:
   - Monster
   - Path
   - TowerProjectile
+  - EnemyUnit
   layers:
   - Default
   - TransparentFX
