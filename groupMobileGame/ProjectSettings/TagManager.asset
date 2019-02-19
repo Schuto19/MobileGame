@@ -9,6 +9,7 @@ TagManager:
   - Path
   - TowerProjectile
   - EnemyUnit
+  - EnemyBase
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c9052d70dc0bbad41b3b9af0c5bd382f
 TextureImporter:
   fileIDToRecycleName: {}
+=======
+guid: 015593e81f74b7242b44c508e5915812
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: driblettes (1)_0
+    21300002: driblettes (1)_1
+    21300004: driblettes (1)_2
+>>>>>>> ccdfd202648daba83a4486743d3e481154c36015
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +40,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: -1
+=======
+    filterMode: 0
+>>>>>>> ccdfd202648daba83a4486743d3e481154c36015
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +53,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> ccdfd202648daba83a4486743d3e481154c36015
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,6 +86,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
@@ -76,6 +94,97 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 0fb3746e053dfb14aaf9f959281b01f1
+=======
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: driblettes (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329de436061c1fc42a28efcfd299ff86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: driblettes (1)_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 45
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ae393d94e977f42b2304546f02c7a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: driblettes (1)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f90b0b36119e6f4482842495b6ecfaf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 24a4c79eafa79f345b450bddbc9ccd25
+>>>>>>> ccdfd202648daba83a4486743d3e481154c36015
     vertices: []
     indices: 
     edges: []
