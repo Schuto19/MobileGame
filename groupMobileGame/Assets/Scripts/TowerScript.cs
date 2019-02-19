@@ -39,19 +39,9 @@ public class TowerScript : MonoBehaviour
             {
                 if (AttackDelay <= 0)
                 {
-                    Instantiate(Attack, transform.position, Quaternion.identity);
+                    Instantiate(Attack2, transform.position, Quaternion.identity);
                     AttackDelay = 10;
-                }
-            }
-            if(Type == 1)
-            {
-                if(AttackDelay >= 9.9f)
-                {
-                    ChargeEffect.GetComponent<ParticleSystem>().Play();
-                }
-                if(AttackDelay <= 0)
-                {
-                    ChargeEffect.GetComponent<ParticleSystem>().Stop();
+                    Instantiate(ChargeEffect, transform.position, Quaternion.identity);
                 }
             }
         }

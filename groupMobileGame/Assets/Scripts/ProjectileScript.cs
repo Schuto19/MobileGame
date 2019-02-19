@@ -6,6 +6,8 @@ public class ProjectileScript : MonoBehaviour
 {
     public float Lifetime;
     public int Damage;
+    public float Velocity;
+    public bool Piercing;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class ProjectileScript : MonoBehaviour
                 TargetMonster = i;
             }
         }
-        GetComponent<Rigidbody2D>().velocity = (Monsters[TargetMonster].transform.position - transform.position).normalized * 10;
+        GetComponent<Rigidbody2D>().velocity = (Monsters[TargetMonster].transform.position - transform.position).normalized * Velocity;
     }
 
     // Update is called once per frame
@@ -36,7 +38,7 @@ public class ProjectileScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Monster")
+        if (collision.gameObject.tag == "Monster" && !Piercing)
         {
             Destroy(gameObject);
         }

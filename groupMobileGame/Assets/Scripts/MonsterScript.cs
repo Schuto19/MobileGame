@@ -23,7 +23,7 @@ public class MonsterScript : MonoBehaviour
         Attacking = false;
 
         GameObject[] Towers = GameObject.FindGameObjectsWithTag("Tower");
-        float ClosestRange = 4.2f;
+        float ClosestRange = 2f;
 
         for (int i = 0; i < Towers.Length; i++)
         {
@@ -46,7 +46,7 @@ public class MonsterScript : MonoBehaviour
                 {
                     GetComponent<Rigidbody2D>().velocity = (Path[i].transform.position - transform.position).normalized * Speed;
 
-                    if ((Path[i].transform.position - transform.position).magnitude < 3.9f)
+                    if ((Path[i].transform.position - transform.position).magnitude < .5f)
                     {
                         Progress += 1;
                     }
