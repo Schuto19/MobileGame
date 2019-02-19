@@ -8,7 +8,8 @@ public class EnemyUnitScript : MonoBehaviour
     public float Speed;
     public int Damage;
     bool Attacking = false;
-    bool Fighting = false;
+    public bool Fighting = false;
+    public float FightDelay = 1;
     int Progress;
     public GameObject DeathEffect;
 
@@ -39,22 +40,40 @@ public class EnemyUnitScript : MonoBehaviour
         //}
 
         GameObject[] Monsters = GameObject.FindGameObjectsWithTag("Monster");
-        float ClosestRange = 1.5f;
+        float ClosestRange2 = 1.5f;
+
+        Fighting = false;
 
         for (int i = 0; i < Monsters.Length; i++)
         {
             float Range = (Monsters[i].transform.position - transform.position).magnitude;
-            if (Range < ClosestRange)
+            if (Range < ClosestRange2)
             {
                 Fighting = true;
-                ClosestRange = Range;
-                GetComponent<Rigidbody2D>().velocity = (Monsters[i].transform.position - transform.position).normalized * Speed;
+                ClosestRange2 = Range;
+                GetComponent<Rigidbody2D>().velocity = ((Monsters[i].transform.position - transform.position).normalized * Speed) / 10;
+                FightDelay -= Time.deltaTime;
+                if(Monsters[i].GetComponent<MonsterScript>().FightDelay <= 0)
+                {
+                    Health -= Monsters[i].GetComponent<MonsterScript>().Damage;
+                    if (Health > 0)
+                    {
+                        GetComponent<ParticleSystem>().emission.SetBursts(new ParticleSystem.Burst[] { new ParticleSystem.Burst(.1f, Monsters[i].GetComponent<MonsterScript>().Damage * 5) });
+                        GetComponent<ParticleSystem>().Play();
+                    }
+                    else
+                    {
+                        Instantiate(DeathEffect, transform.position, Quaternion.identity);
+                        Destroy(gameObject);
+                    }
+                    Monsters[i].GetComponent<MonsterScript>().FightDelay = 1;
+                }
             }
         }
 
         GameObject[] Path = GameObject.FindGameObjectsWithTag("Path");
 
-        if (!Attacking)
+        if (!Attacking && !Fighting)
         {
             for (int i = 0; i < Path.Length; i++)
             {

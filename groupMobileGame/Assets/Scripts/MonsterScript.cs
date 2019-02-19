@@ -8,6 +8,8 @@ public class MonsterScript : MonoBehaviour
     public float Speed;
     public int Damage;
     bool Attacking = false;
+    public bool Fighting = false;
+    public float FightDelay = 1;
     int Progress = 0;
     public GameObject DeathEffect;
 
@@ -36,9 +38,41 @@ public class MonsterScript : MonoBehaviour
             }
         }
 
+        GameObject[] Enemies = GameObject.FindGameObjectsWithTag("EnemyUnit");
+        float ClosestRange2 = 1.5f;
+
+        Fighting = false;
+
+        for (int i = 0; i < Enemies.Length; i++)
+        {
+            float Range = (Enemies[i].transform.position - transform.position).magnitude;
+            if (Range < ClosestRange2)
+            {
+                Fighting = true;
+                ClosestRange2 = Range;
+                GetComponent<Rigidbody2D>().velocity = ((Enemies[i].transform.position - transform.position).normalized * Speed) / 10;
+                FightDelay -= Time.deltaTime;
+                if (Enemies[i].GetComponent<EnemyUnitScript>().FightDelay <= 0)
+                {
+                    Health -= Enemies[i].GetComponent<EnemyUnitScript>().Damage;
+                    if (Health > 0)
+                    {
+                        GetComponent<ParticleSystem>().emission.SetBursts(new ParticleSystem.Burst[] { new ParticleSystem.Burst(.1f, Enemies[i].GetComponent<EnemyUnitScript>().Damage * 5) });
+                        GetComponent<ParticleSystem>().Play();
+                    }
+                    else
+                    {
+                        Instantiate(DeathEffect, transform.position, Quaternion.identity);
+                        Destroy(gameObject);
+                    }
+                    Enemies[i].GetComponent<EnemyUnitScript>().FightDelay = 1;
+                }
+            }
+        }
+
         GameObject[] Path = GameObject.FindGameObjectsWithTag("Path");
 
-        if(!Attacking)
+        if(!Attacking && !Fighting)
         {
             for (int i = 0; i < Path.Length; i++)
             {

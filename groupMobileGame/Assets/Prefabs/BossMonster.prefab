@@ -146,6 +146,8 @@ MonoBehaviour:
   Health: 10
   Speed: 0.5
   Damage: 10
+  MaxFightDelay: 3
+  FightDelay: 1
   DeathEffect: {fileID: 1625724900860004975, guid: 5ce25cd3d1c2f074d96ce488fab2a630,
     type: 3}
 --- !u!198 &2141343622031937255
