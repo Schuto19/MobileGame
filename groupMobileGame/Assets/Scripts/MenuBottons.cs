@@ -21,4 +21,9 @@ public class MenuBottons : MonoBehaviour {
     {
         SceneManager.LoadScene("Options");
     }
+
+    public void Continue()
+    {
+        SceneManager.LoadScene("levelSelect");
+    }
 }
