@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ToLevel2 : MonoBehaviour {
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("EnemyBase").GetComponent<EnemyBaseHp>().Hp <= 0)
+        if (GameObject.FindGameObjectWithTag("EnemyBase").GetComponent<EnemyBase>().Health <= 0)
         {
             GetComponent<Canvas>().enabled = true;
         }

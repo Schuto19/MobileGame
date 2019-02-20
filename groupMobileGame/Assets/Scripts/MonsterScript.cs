@@ -86,6 +86,11 @@ public class MonsterScript : MonoBehaviour
                     }
                 }
             }
+
+            if(Progress == Path.Length)
+            {
+                GetComponent<Rigidbody2D>().velocity = (GameObject.FindGameObjectWithTag("EnemyBase").transform.position - transform.position).normalized * Speed;
+            }
         }
     }
 

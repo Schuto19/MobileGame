@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3315898787677402976}
   - component: {fileID: 3315898787677402977}
   - component: {fileID: 3315898787677403006}
-  - component: {fileID: 3315898787677403007}
+  - component: {fileID: 287824504}
   m_Layer: 0
   m_Name: EnemyBase
   m_TagString: EnemyBase
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3315898787677403004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.68, y: 3.6, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children:
   - {fileID: 3315898787843929960}
   m_Father: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4834,7 +4834,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &3315898787677403007
+--- !u!114 &287824504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4843,10 +4843,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3315898787677403004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b38dd620289e53428a0f067bb6097e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 3511cc0d3094d9a4888a2fc93b695844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  Health: 100
+  DeathEffect: {fileID: 5561266254067784343, guid: 3e4b88f3a1631b443a8b7a664fd444ee,
+    type: 3}
+  EnemyUnit1: {fileID: 8850620823330861557, guid: 0c63158dc47f1f945baf46d45a812aad,
+    type: 3}
+  EnemyUnit2: {fileID: 345563244253107000, guid: f85bdcf96fa551b4fb9c9dc0a023f525,
+    type: 3}
+  EnemyUnit3: {fileID: 345563244253107000, guid: b63dee8581353a14f854559ef6e8c88b,
+    type: 3}
 --- !u!1 &3315898787843929956
 GameObject:
   m_ObjectHideFlags: 0

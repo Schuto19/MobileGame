@@ -64,6 +64,7 @@ public class EnemyUnitScript : MonoBehaviour
                     else
                     {
                         Instantiate(DeathEffect, transform.position, Quaternion.identity);
+                        GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency += 5;
                         Destroy(gameObject);
                     }
                     Monsters[i].GetComponent<MonsterScript>().FightDelay = 1;
