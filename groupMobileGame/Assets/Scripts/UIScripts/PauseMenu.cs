@@ -5,29 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		//check if p key is pressed
-        if(Input.GetKeyDown(KeyCode.P))
+
+    public void Pause()
+    {
+        if (Time.timeScale == 1)
         {
-            //if pressed, stop stuff from moving
-            if (Time.timeScale == 1)
-            {
-                Time.timeScale = 0;
-                //and make pause menu visible.
-                GetComponent<Canvas>().enabled = true;
-            }else
-            {
-                //unpause
-                Resume();
-            }
+         Time.timeScale = 0;
+         GetComponent<Canvas>().enabled = true;
         }
-   
+        else if (Time.timeScale == 0)
+        {
+            Resume();
+        }
     }
 
     public void Resume()
@@ -38,7 +27,7 @@ public class PauseMenu : MonoBehaviour {
 
     public void Restart()
     {
-        SceneManager.LoadScene("Maze");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;

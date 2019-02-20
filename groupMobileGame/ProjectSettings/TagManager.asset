@@ -10,6 +10,7 @@ TagManager:
   - TowerProjectile
   - EnemyUnit
   - EnemyBase
+  - win
   layers:
   - Default
   - TransparentFX
