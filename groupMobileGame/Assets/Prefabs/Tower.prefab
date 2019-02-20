@@ -4847,8 +4847,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Health: 10
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 5561266254067784343, guid: 3e4b88f3a1631b443a8b7a664fd444ee,
+    type: 3}
   AttackDelay: 3
-  Attack: {fileID: 0}
-  Attack2: {fileID: 0}
-  ChargeEffect: {fileID: 0}
+  Attack: {fileID: 2376996734130900751, guid: c82b96ff970fa1940b47dc554861c625, type: 3}
+  Attack2: {fileID: 1445324620, guid: 99513191f276877499fc5fccdef7e782, type: 3}
+  ChargeEffect: {fileID: 6913001665021845260, guid: de40a0c2aecd5f84689fc614e9883021,
+    type: 3}

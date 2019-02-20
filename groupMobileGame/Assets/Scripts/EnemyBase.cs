@@ -14,7 +14,7 @@ public class EnemyBase : MonoBehaviour
     public GameObject EnemyUnit2;
     public GameObject EnemyUnit3;
     bool Ending = false;
-    float EndTimer = 5;
+    float EndTimer = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +70,7 @@ public class EnemyBase : MonoBehaviour
             GetComponent<ParticleSystem>().Play();
             DamagedDelay = 1;
         }
-        if (DamagedDelay <= 0 && Health <= collision.gameObject.GetComponent<MonsterScript>().Damage && EndTimer == 5)
+        if (DamagedDelay <= 0 && Health <= collision.gameObject.GetComponent<MonsterScript>().Damage && EndTimer == 2)
         {
             Ending = true;
             GameObject.Find("LevelEndEffect").GetComponent<ParticleSystem>().Play();
