@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1965164261}
   - component: {fileID: 1159550918}
   - component: {fileID: 1159550917}
+  - component: {fileID: 168458853}
+  - component: {fileID: 168458854}
   m_Layer: 8
   m_Name: BrutishMonster
   m_TagString: Monster
@@ -73,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.3726415, b: 0.3726415, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2cf02aaf096b2fa47a5452a0aad15fc0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -104,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2398480017310333303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -120,9 +122,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -143,9 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339df428284ccbc499d38efd45028daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 4
+  Type: 2
+  Health: 8
   Speed: 1
-  Damage: 2
+  Damage: 4
   Fighting: 0
   FightDelay: 1
   DeathEffect: {fileID: 1625724900860004975, guid: 5ce25cd3d1c2f074d96ce488fab2a630,
@@ -340,7 +343,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.37254903, b: 0.37254903, a: 1}
+      maxColor: {r: 0.10466359, g: 0.4528302, b: 0.17318493, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4874,3 +4877,35 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!95 &168458853
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398480017310333302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf639bee80474bf4988fb856706e2e6f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &168458854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398480017310333302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533c8ff0e7fade040b685539a1ce15ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 2

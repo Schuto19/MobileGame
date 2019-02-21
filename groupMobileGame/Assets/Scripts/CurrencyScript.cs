@@ -18,7 +18,7 @@ public class CurrencyScript : MonoBehaviour
     void Update()
     {
         CurrencyGrowthDelay += Time.deltaTime;
-        if(CurrencyGrowthDelay >= 1)
+        if(CurrencyGrowthDelay >= .5f)
         {
             Currency += 1;
             CurrencyGrowthDelay = 0;

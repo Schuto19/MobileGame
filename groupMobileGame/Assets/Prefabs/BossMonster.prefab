@@ -143,10 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339df428284ccbc499d38efd45028daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
+  Health: 20
   Speed: 0.5
-  Damage: 10
-  MaxFightDelay: 3
+  Damage: 20
+  Fighting: 0
   FightDelay: 1
   DeathEffect: {fileID: 1625724900860004975, guid: 5ce25cd3d1c2f074d96ce488fab2a630,
     type: 3}

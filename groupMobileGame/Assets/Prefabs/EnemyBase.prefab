@@ -4846,7 +4846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3511cc0d3094d9a4888a2fc93b695844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 150
   DeathEffect: {fileID: 5561266254067784343, guid: 3e4b88f3a1631b443a8b7a664fd444ee,
     type: 3}
   EnemyUnit1: {fileID: 8850620823330861557, guid: 0c63158dc47f1f945baf46d45a812aad,

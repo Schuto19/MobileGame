@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonsterScript : MonoBehaviour
 {
+    public int Type;
     public int Health;
     public float Speed;
     public int Damage;
@@ -24,22 +25,34 @@ public class MonsterScript : MonoBehaviour
     {
         Attacking = false;
 
-        GameObject[] Towers = GameObject.FindGameObjectsWithTag("Tower");
-        float ClosestRange = 2.25f;
-
-        for (int i = 0; i < Towers.Length; i++)
+        if(Type == 2)
         {
-            float Range = (Towers[i].transform.position - transform.position).magnitude;
-            if (Range < ClosestRange)
+            GameObject[] Towers = GameObject.FindGameObjectsWithTag("Tower");
+            float ClosestRange = 2.5f;
+
+            for (int i = 0; i < Towers.Length; i++)
             {
-                Attacking = true;
-                ClosestRange = Range;
-                GetComponent<Rigidbody2D>().velocity = (Towers[i].transform.position - transform.position).normalized * Speed;
+                float Range = (Towers[i].transform.position - transform.position).magnitude;
+                if (Range < ClosestRange)
+                {
+                    Attacking = true;
+                    ClosestRange = Range;
+                    GetComponent<Rigidbody2D>().velocity = (Towers[i].transform.position - transform.position).normalized * Speed;
+                }
             }
         }
 
+
         GameObject[] Enemies = GameObject.FindGameObjectsWithTag("EnemyUnit");
-        float ClosestRange2 = 1.5f;
+        float ClosestRange2;
+        if(Type == 2)
+        {
+            ClosestRange2 = 1.25f;
+        }
+        else
+        {
+            ClosestRange2 = 1.5f;
+        }
 
         Fighting = false;
 

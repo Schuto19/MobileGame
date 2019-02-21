@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lifetime: 10
-  Damage: 3
+  Damage: 6
   Velocity: 30
   Piercing: 1
 --- !u!96 &1445324621

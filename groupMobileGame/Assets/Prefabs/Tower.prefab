@@ -4846,7 +4846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
-  Health: 10
+  Health: 20
   DeathEffect: {fileID: 5561266254067784343, guid: 3e4b88f3a1631b443a8b7a664fd444ee,
     type: 3}
   AttackDelay: 3
