@@ -136,6 +136,8 @@ MonoBehaviour:
   Damage: 6
   Velocity: 30
   Piercing: 1
+  ShieldDamageEffect: {fileID: 634250226759017814, guid: 57d91ce9fdfa711458a0a32b98198174,
+    type: 3}
 --- !u!96 &1445324621
 TrailRenderer:
   serializedVersion: 2

@@ -480,12 +480,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83724579}
-  m_LocalRotation: {x: 0, y: 0, z: 0.26370466, w: 0.9646035}
-  m_LocalPosition: {x: -0.06, y: -0.93, z: 0.30294117}
-  m_LocalScale: {x: 6.07, y: 67.16798, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.26370466, w: 0.9646035}
+  m_LocalPosition: {x: -0.06, y: -0.93, z: -9.697059}
+  m_LocalScale: {x: 6.07, y: 67.167984, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 1627912023}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.58}
 --- !u!1 &328240813
 GameObject:
@@ -1301,12 +1301,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064911942}
-  m_LocalRotation: {x: 0, y: 0, z: -0.095845714, w: 0.99539626}
-  m_LocalPosition: {x: -1.34, y: 8.22, z: 0.30294117}
-  m_LocalScale: {x: 6.07, y: 74.01945, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.095845714, w: 0.99539626}
+  m_LocalPosition: {x: -1.34, y: 8.22, z: -9.697059}
+  m_LocalScale: {x: 6.070001, y: 74.01946, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 1627912023}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11}
 --- !u!1001 &1159378634
 PrefabInstance:
@@ -1661,12 +1661,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451587800}
-  m_LocalRotation: {x: 0, y: 0, z: -0.11537064, w: 0.99332255}
-  m_LocalPosition: {x: 1.25, y: -9.22, z: 0}
-  m_LocalScale: {x: 6.07, y: 63.362133, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.11537064, w: 0.99332255}
+  m_LocalPosition: {x: 1.25, y: -9.22, z: -10}
+  m_LocalScale: {x: 6.070001, y: 63.362133, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 1627912023}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -13.25}
 --- !u!1 &1627912022
 GameObject:
@@ -1699,6 +1699,9 @@ Transform:
   - {fileID: 1927364672}
   - {fileID: 1063033828}
   - {fileID: 328240814}
+  - {fileID: 1451587802}
+  - {fileID: 83724581}
+  - {fileID: 1064911944}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1933,46 +1936,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1372800182}
-    - target: {fileID: 443379536078370801, guid: a80309f77dc1ead44a11fdb95f3faf4c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Spawn0
-      objectReference: {fileID: 0}
     - target: {fileID: 443379536978925193, guid: a80309f77dc1ead44a11fdb95f3faf4c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1372800182}
-    - target: {fileID: 443379536978925193, guid: a80309f77dc1ead44a11fdb95f3faf4c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Spawn1
-      objectReference: {fileID: 0}
-    - target: {fileID: 443379536597942309, guid: a80309f77dc1ead44a11fdb95f3faf4c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1372800182}
     - target: {fileID: 443379536597942309, guid: a80309f77dc1ead44a11fdb95f3faf4c,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Spawn2
-      objectReference: {fileID: 0}
-    - target: {fileID: 443379536187549977, guid: a80309f77dc1ead44a11fdb95f3faf4c,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1372800182}
     - target: {fileID: 443379536187549977, guid: a80309f77dc1ead44a11fdb95f3faf4c,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Spawn3
-      objectReference: {fileID: 0}
-    - target: {fileID: 443379535148283529, guid: a80309f77dc1ead44a11fdb95f3faf4c,
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1372800182}
+    - target: {fileID: 6750870712379526071, guid: a80309f77dc1ead44a11fdb95f3faf4c,
         type: 3}
-      propertyPath: Currency
-      value: 10
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1372800182}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a80309f77dc1ead44a11fdb95f3faf4c, type: 3}
 --- !u!1001 &2117505182
@@ -2041,36 +2024,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608739362388602623, guid: 2c076a55df847bb46aec9dd751b128cd,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608739362388602623, guid: 2c076a55df847bb46aec9dd751b128cd,
-        type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608739362388602623, guid: 2c076a55df847bb46aec9dd751b128cd,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608739362388602623, guid: 2c076a55df847bb46aec9dd751b128cd,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608739362388602623, guid: 2c076a55df847bb46aec9dd751b128cd,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608739362388602623, guid: 2c076a55df847bb46aec9dd751b128cd,
-        type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c076a55df847bb46aec9dd751b128cd, type: 3}

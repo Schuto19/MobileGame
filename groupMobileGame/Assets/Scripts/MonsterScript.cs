@@ -13,6 +13,9 @@ public class MonsterScript : MonoBehaviour
     public float FightDelay = 1;
     int Progress = 0;
     public GameObject DeathEffect;
+    public int ShieldHealth = 14;
+    float ShieldRepairTime = 10;
+    public GameObject ShieldEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -64,7 +67,10 @@ public class MonsterScript : MonoBehaviour
                 Fighting = true;
                 ClosestRange2 = Range;
                 GetComponent<Rigidbody2D>().velocity = ((Enemies[i].transform.position - transform.position).normalized * Speed) / 10;
-                FightDelay -= Time.deltaTime;
+                if(Type != 3)
+                {
+                    FightDelay -= Time.deltaTime;
+                }
                 if (Enemies[i].GetComponent<EnemyUnitScript>().FightDelay <= 0)
                 {
                     Health -= Enemies[i].GetComponent<EnemyUnitScript>().Damage;
@@ -105,6 +111,20 @@ public class MonsterScript : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = (GameObject.FindGameObjectWithTag("EnemyBase").transform.position - transform.position).normalized * Speed;
             }
         }
+
+        if(Type == 3 && ShieldHealth <= 0)
+        {
+            ShieldRepairTime -= Time.deltaTime;
+            ShieldEffect.GetComponent<ParticleSystem>().Stop();
+        }
+        if(ShieldRepairTime <= 0)
+        {
+            ShieldHealth = 20;
+            ShieldRepairTime = 10;
+            ShieldEffect.GetComponent<ParticleSystem>().Play();
+        }
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

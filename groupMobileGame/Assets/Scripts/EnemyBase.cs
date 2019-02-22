@@ -59,7 +59,7 @@ public class EnemyBase : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Monster")
+        if (collision.gameObject.tag == "Monster" && collision.gameObject.GetComponent<MonsterScript>().Type != 3)
         {
             DamagedDelay -= Time.deltaTime;
         }

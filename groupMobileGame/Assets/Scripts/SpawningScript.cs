@@ -45,18 +45,18 @@ public class SpawningScript : MonoBehaviour
     }
     public void Spawn3()
     {
-        if (GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency >= 75)
+        if (GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency >= 20)
         {
             Instantiate(Monsters[3], SpawnPoint.transform.position, Quaternion.identity);
-            GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency -= 75;
+            GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency -= 20;
         }
     }
     public void Spawn4()
     {
-        if (GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency >= 999)
+        if (GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency >= 75)
         {
             Instantiate(Monsters[4], SpawnPoint.transform.position, Quaternion.identity);
-            GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency -= 999;
+            GameObject.Find("Currency").GetComponent<CurrencyScript>().Currency -= 75;
         }
     }
 }

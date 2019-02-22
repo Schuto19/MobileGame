@@ -8,6 +8,7 @@ public class ProjectileScript : MonoBehaviour
     public int Damage;
     public float Velocity;
     public bool Piercing;
+    public GameObject ShieldDamageEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,22 @@ public class ProjectileScript : MonoBehaviour
         if(Lifetime <= 0)
         {
             Destroy(gameObject);
+        }
+
+        GameObject[] Monsters = GameObject.FindGameObjectsWithTag("Monster");
+        for (int i = 0; i < Monsters.Length; i++)
+        {
+            float Range = (Monsters[i].transform.position - transform.position).magnitude;
+            float DeathRange = 1.5f;
+            if (Range < DeathRange)
+            {
+                if(Monsters[i].GetComponent<MonsterScript>().Type == 3 && Monsters[i].GetComponent<MonsterScript>().ShieldHealth > 0)
+                {
+                    Destroy(gameObject);
+                    Monsters[i].GetComponent<MonsterScript>().ShieldHealth -= Damage;
+                    Instantiate(ShieldDamageEffect, transform.position, Quaternion.identity);
+                }
+            }
         }
     }
 

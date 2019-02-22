@@ -135,3 +135,5 @@ MonoBehaviour:
   Damage: 2
   Velocity: 10
   Piercing: 0
+  ShieldDamageEffect: {fileID: 634250226759017814, guid: 57d91ce9fdfa711458a0a32b98198174,
+    type: 3}
