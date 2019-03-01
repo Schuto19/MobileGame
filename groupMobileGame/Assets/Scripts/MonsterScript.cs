@@ -5,15 +5,15 @@ using UnityEngine;
 public class MonsterScript : MonoBehaviour
 {
     public int Type;
-    public int Health;
+    public float Health;
     public float Speed;
-    public int Damage;
+    public float Damage;
     bool Attacking = false;
     public bool Fighting = false;
     public float FightDelay = 1;
     int Progress = 0;
     public GameObject DeathEffect;
-    public int ShieldHealth = 14;
+    public float ShieldHealth = 14;
     float ShieldRepairTime = 10;
     public GameObject ShieldEffect;
 

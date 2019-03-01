@@ -57,7 +57,10 @@ public class ProjectileScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Monster" && !Piercing)
         {
-            Destroy(gameObject);
+            Destroy(GetComponent<BoxCollider2D>());
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            Destroy(gameObject, 1);
         }
     }
 }

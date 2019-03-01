@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerScript : MonoBehaviour
 {
     public int Type;
-    public int Health;
+    public float Health;
     float DamagedDelay;
     public GameObject DeathEffect;
     public float AttackDelay = 3;

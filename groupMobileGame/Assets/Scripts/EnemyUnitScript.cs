@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyUnitScript : MonoBehaviour
 {
-    public int Health;
+    public float Health;
     public float Speed;
-    public int Damage;
+    public float Damage;
     bool Attacking = false;
     public bool Fighting = false;
     public float FightDelay = 1;

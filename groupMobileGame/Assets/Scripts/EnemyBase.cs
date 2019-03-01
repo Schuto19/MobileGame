@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
-    public int Health = 100;
+    public float Health = 100;
     float DamagedDelay = 1;
     float SpawnDelay1;
     float SpawnDelay2;
