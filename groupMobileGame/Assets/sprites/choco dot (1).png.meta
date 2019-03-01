@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 99f28d43a314cb841b997a5092f76bb1
 TextureImporter:
   fileIDToRecycleName: {}
-=======
-guid: b53b1d58f40d5e84c8cc944d41ade68c
-TextureImporter:
-  fileIDToRecycleName:
-    21300000: choco dot (1)_0
-    21300002: choco dot (1)_1
-    21300004: choco dot (1)_2
->>>>>>> ccdfd202648daba83a4486743d3e481154c36015
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,24 +31,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: -1
-=======
-    filterMode: 0
->>>>>>> ccdfd202648daba83a4486743d3e481154c36015
     aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 1
-=======
-  spriteMode: 2
->>>>>>> ccdfd202648daba83a4486743d3e481154c36015
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -86,15 +69,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-<<<<<<< HEAD
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-    outline: []
-    physicsShape: []
-    bones: []
-    spriteID: 5c52fa09aae9ee64dbf2dc8dff263040
-=======
   - serializedVersion: 2
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -119,72 +93,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: choco dot (1)_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 334c5e5b41b371845a3b9165c51b0959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: choco dot (1)_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1de2d9c20bfeab847ad5beb94362a899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: choco dot (1)_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9de967d417083c4198615565f0c2e0d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 67f2552140b922641ad5936734ac90b9
->>>>>>> ccdfd202648daba83a4486743d3e481154c36015
+    spriteID: 
     vertices: []
     indices: 
     edges: []
