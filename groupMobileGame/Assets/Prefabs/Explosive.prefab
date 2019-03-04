@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
   m_FlipX: 0
@@ -173,8 +173,8 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Time: 0.5
+  m_SortingOrder: 1
+  m_Time: 0.35
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.2
@@ -204,9 +204,9 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.6666667, g: 0.6666667, b: 0.6666667, a: 1}
-      key1: {r: 0.6666667, g: 0.6666667, b: 0.6666667, a: 0.39215687}
-      key2: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+      key1: {r: 0.4, g: 0.4, b: 0.4, a: 0.39215687}
+      key2: {r: 0.6666667, g: 0.6666667, b: 0.6666667, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
@@ -214,7 +214,7 @@ TrailRenderer:
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
       ctime1: 65535
-      ctime2: 0
+      ctime2: 65535
       ctime3: 0
       ctime4: 0
       ctime5: 0

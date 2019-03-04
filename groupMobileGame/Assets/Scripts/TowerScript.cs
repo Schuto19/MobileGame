@@ -8,9 +8,8 @@ public class TowerScript : MonoBehaviour
     public float Health;
     float DamagedDelay;
     public GameObject DeathEffect;
-    public float AttackDelay = 3;
+    public float AttackDelay;
     public GameObject Attack;
-    public GameObject Attack2;
     public GameObject ChargeEffect;
 
 
@@ -39,9 +38,17 @@ public class TowerScript : MonoBehaviour
             {
                 if (AttackDelay <= 0)
                 {
-                    Instantiate(Attack2, transform.position, Quaternion.identity);
+                    Instantiate(Attack, transform.position, Quaternion.identity);
                     AttackDelay = 10;
                     Instantiate(ChargeEffect, transform.position, Quaternion.identity);
+                }
+            }
+            if ((Monsters[i].transform.position - transform.position).magnitude < 5 && Type == 2)
+            {
+                if (AttackDelay <= 0)
+                {
+                    Instantiate(Attack, transform.position, Quaternion.identity);
+                    AttackDelay = 6;
                 }
             }
         }

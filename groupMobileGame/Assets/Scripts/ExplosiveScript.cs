@@ -30,9 +30,22 @@ public class ExplosiveScript : MonoBehaviour
         Lifetime -= Time.deltaTime;
         if(Lifetime <= 0)
         {
-            Instantiate(Explosion, transform.position, Quaternion.identity);
-            Instantiate(ExplosionEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Explode();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Monster")
+        {
+            Explode();
+        }
+    }
+
+    void Explode()
+    {
+        Instantiate(Explosion, transform.position, Quaternion.identity);
+        Instantiate(ExplosionEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
