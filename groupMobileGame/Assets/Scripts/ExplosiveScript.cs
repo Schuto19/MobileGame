@@ -21,7 +21,7 @@ public class ExplosiveScript : MonoBehaviour
                 TargetMonster = i;
             }
         }
-        GetComponent<Rigidbody2D>().velocity = (Monsters[TargetMonster].transform.position - transform.position).normalized * 5;
+        GetComponent<Rigidbody2D>().velocity = (Monsters[TargetMonster].transform.position - transform.position).normalized * 7.5f;
     }
 
     // Update is called once per frame
@@ -31,6 +31,21 @@ public class ExplosiveScript : MonoBehaviour
         if(Lifetime <= 0)
         {
             Explode();
+        }
+
+        GameObject[] Monsters = GameObject.FindGameObjectsWithTag("Monster");
+        for (int i = 0; i < Monsters.Length; i++)
+        {
+            float Range = (Monsters[i].transform.position - transform.position).magnitude;
+            float DeathRange = 1.5f;
+            if (Range < DeathRange)
+            {
+                if (Monsters[i].GetComponent<MonsterScript>().Type == 3 && Monsters[i].GetComponent<MonsterScript>().ShieldHealth > 0)
+                {
+                    Monsters[i].GetComponent<MonsterScript>().ShieldHealth -= 4;
+                    Explode();
+                }
+            }
         }
     }
 
