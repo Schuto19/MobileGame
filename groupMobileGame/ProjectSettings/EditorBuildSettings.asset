@@ -5,31 +5,52 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d9d912cde6fc97b47ad4cd1347de4017
   - enabled: 1
-    path: Assets/Scenes/levelSelect.unity
+    path: Assets/Scenes/difficultySelect.unity
     guid: 3a500b3e0f865354faf19e8a79a92672
   - enabled: 1
-    path: Assets/Scenes/Options.unity
-    guid: 1a8fabee947f3db41a37e4ca796e48fb
+    path: Assets/Scenes/levelSelectN.unity
+    guid: cd9991fee7d91844fae14e7ec76dfd37
   - enabled: 1
-    path: Assets/Scenes/Normal.unity
+    path: Assets/Scenes/levelSelectH.unity
+    guid: b80e92eb1fd5c874c96d68647e4de575
+  - enabled: 1
+    path: Assets/Scenes/levelSelectL.unity
+    guid: e0725a68c4b8c3442aeeabf28c320dff
+  - enabled: 1
+    path: Assets/Scenes/Level1N.unity
     guid: ea8ca9c3ea6a193428627f4dc64602fe
   - enabled: 1
-    path: Assets/Scenes/Hard.unity
+    path: Assets/Scenes/Level2N.unity
     guid: 8637b7e1e49053144830c8deb4b2073c
   - enabled: 1
-    path: Assets/Scenes/level3.unity
-    guid: 2a067b7bfc2e3f447ae7ffa3fc87f75a
+    path: Assets/Scenes/Level3N.unity
+    guid: 331a16a73ee7a7d4a99165aeba6854d2
   - enabled: 1
+    path: Assets/Scenes/Level1H.unity
+    guid: 256dfa721c13b3144a6e2502a8e3924e
+  - enabled: 1
+    path: Assets/Scenes/Level2H.unity
+    guid: 794d543639ec6724f90a4897ae826454
+  - enabled: 1
+    path: Assets/Scenes/Level3H.unity
+    guid: e4928fdcfc2044f4f9dc6d83f03fe281
+  - enabled: 1
+    path: Assets/Scenes/Level1L.unity
+    guid: b26cdb75ec727124d872f934845bb4a1
+  - enabled: 1
+    path: Assets/Scenes/Level2L.unity
+    guid: 9576e27895c27e043952e39645d6d157
+  - enabled: 1
+    path: Assets/Scenes/Level3L.unity
+    guid: fedd017079616164699cc9e35bd249e3
+  - enabled: 0
     path: Assets/Scenes/lose.unity
     guid: cb1423f8afa7a4947a7ab3c496dfc768
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/win.unity
     guid: 57ba4c25988839745bf27e3b07429dd4
   m_configObjects: {}
