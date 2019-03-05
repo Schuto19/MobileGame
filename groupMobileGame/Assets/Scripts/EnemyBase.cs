@@ -32,17 +32,17 @@ public class EnemyBase : MonoBehaviour
         SpawnDelay3 -= Time.deltaTime;
         if (SpawnDelay1 <= 0 && !Ending)
         {
-            Instantiate(EnemyUnit1, transform.position, Quaternion.identity);
+            Instantiate(EnemyUnit1, transform.position + new Vector3(0, -1.5f, 0), Quaternion.identity);
             SpawnDelay1 = Random.Range(8f, 13f);
         }
         if (SpawnDelay2 <= 0 && !Ending)
         {
-            Instantiate(EnemyUnit2, transform.position, Quaternion.identity);
+            Instantiate(EnemyUnit2, transform.position + new Vector3(0, -1.5f, 0), Quaternion.identity);
             SpawnDelay2 = Random.Range(11f, 16f);
         }
         if (SpawnDelay3 <= 0 && !Ending)
         {
-            Instantiate(EnemyUnit3, transform.position, Quaternion.identity);
+            Instantiate(EnemyUnit3, transform.position + new Vector3(0, -1.5f, 0), Quaternion.identity);
             SpawnDelay3 = Random.Range(11f, 16f);
         }
 

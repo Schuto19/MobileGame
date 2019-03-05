@@ -71,8 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: d35a320891fb65345b12231e039a66da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,9 +98,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.25, y: 0.25}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4851,6 +4851,5 @@ MonoBehaviour:
     type: 3}
   AttackDelay: 3
   Attack: {fileID: 2376996734130900751, guid: c82b96ff970fa1940b47dc554861c625, type: 3}
-  Attack2: {fileID: 1445324620, guid: 99513191f276877499fc5fccdef7e782, type: 3}
   ChargeEffect: {fileID: 6913001665021845260, guid: de40a0c2aecd5f84689fc614e9883021,
     type: 3}
