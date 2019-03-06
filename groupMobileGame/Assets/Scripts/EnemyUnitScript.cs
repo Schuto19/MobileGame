@@ -16,6 +16,23 @@ public class EnemyUnitScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 1)
+        {
+            Health *= 1.1f;
+        }
+        if (GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 1)
+        {
+            Damage *= 1.1f;
+        }
+
+        if (GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 2)
+        {
+            Health *= 1.25f;
+        }
+        if (GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 2)
+        {
+            Damage *= 1.25f;
+        }
         GameObject[] Path = GameObject.FindGameObjectsWithTag("Path");
         Progress = Path.Length - 1;
     }

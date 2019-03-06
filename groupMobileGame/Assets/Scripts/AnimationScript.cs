@@ -15,22 +15,25 @@ public class AnimationScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GetComponent<Rigidbody2D>().velocity.x < 0 && Type != 1)
+        if(Type != 7)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else if(GetComponent<Rigidbody2D>().velocity.x > 0 && Type != 1)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
+            if (GetComponent<Rigidbody2D>().velocity.x < 0 && Type != 1)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if (GetComponent<Rigidbody2D>().velocity.x > 0 && Type != 1)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
 
-        if (GetComponent<Rigidbody2D>().velocity.x < 0 && Type == 1)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else if (GetComponent<Rigidbody2D>().velocity.x > 0 && Type == 1)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
+            if (GetComponent<Rigidbody2D>().velocity.x < 0 && Type == 1)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else if (GetComponent<Rigidbody2D>().velocity.x > 0 && Type == 1)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
         }
     }
 }

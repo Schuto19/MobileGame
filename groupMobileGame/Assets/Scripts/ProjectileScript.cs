@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileScript : MonoBehaviour
 {
     public float Lifetime;
-    public int Damage;
+    public float Damage;
     public float Velocity;
     public bool Piercing;
     public GameObject ShieldDamageEffect;
@@ -13,6 +13,14 @@ public class ProjectileScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 1)
+        {
+            Damage *= 1.1f;
+        }
+        else if (GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 2)
+        {
+            Damage *= 1.25f;
+        }
         float ClosestRange = 999;
         int TargetMonster = 0;
         GameObject[] Monsters = GameObject.FindGameObjectsWithTag("Monster");
