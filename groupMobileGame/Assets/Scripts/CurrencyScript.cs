@@ -11,7 +11,7 @@ public class CurrencyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Currency = 35;
     }
 
     // Update is called once per frame
@@ -23,6 +23,6 @@ public class CurrencyScript : MonoBehaviour
             Currency += 1;
             CurrencyGrowthDelay = 0;
         }
-        GetComponent<Text>().text = "Currency: " + Currency;
+        GetComponent<Text>().text = "Souls: " + Currency;
     }
 }
