@@ -17,14 +17,6 @@ public class TowerScript : MonoBehaviour
     void Start()
     {
         DamagedDelay = 1;
-        if(GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 1)
-        {
-            Health *= 1.1f;
-        }
-        else if (GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 2)
-        {
-            Health *= 1.25f;
-        }
     }
 
     // Update is called once per frame

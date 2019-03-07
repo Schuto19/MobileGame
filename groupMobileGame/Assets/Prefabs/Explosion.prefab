@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lifetime: 0.1
-  Damage: 5
+  Damage: 4
   Velocity: 0
   Piercing: 1
   ShieldDamageEffect: {fileID: 0}

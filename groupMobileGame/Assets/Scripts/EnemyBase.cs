@@ -19,9 +19,9 @@ public class EnemyBase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnDelay1 = Random.Range(3f, 10f);
-        SpawnDelay2 = Random.Range(7f, 12f);
-        SpawnDelay3 = Random.Range(7f, 12f);
+            SpawnDelay1 = Random.Range(18f, 24f);
+            SpawnDelay2 = Random.Range(36f, 48f);
+            SpawnDelay3 = Random.Range(36f, 48f);
     }
 
     // Update is called once per frame
@@ -33,20 +33,20 @@ public class EnemyBase : MonoBehaviour
         if (SpawnDelay1 <= 0 && !Ending)
         {
             Instantiate(EnemyUnit1, transform.position + new Vector3(0, -1.5f, 0), Quaternion.identity);
-            SpawnDelay1 = Random.Range(8f, 13f);
+            SpawnDelay1 = Random.Range(9f, 12f);
         }
         if (SpawnDelay2 <= 0 && !Ending)
         {
             Instantiate(EnemyUnit2, transform.position + new Vector3(0, -1.5f, 0), Quaternion.identity);
-            SpawnDelay2 = Random.Range(11f, 16f);
+            SpawnDelay2 = Random.Range(18f, 24f);
         }
         if (SpawnDelay3 <= 0 && !Ending)
         {
             Instantiate(EnemyUnit3, transform.position + new Vector3(0, -1.5f, 0), Quaternion.identity);
-            SpawnDelay3 = Random.Range(11f, 16f);
+            SpawnDelay3 = Random.Range(18f, 24f);
         }
 
-        if(Ending)
+        if (Ending)
         {
             EndTimer -= Time.deltaTime;
         }

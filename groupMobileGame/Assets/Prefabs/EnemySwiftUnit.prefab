@@ -145,9 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b8a1cfb2d2b3c42ab5f7d0b2cdf7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 4
-  Speed: 4
-  Damage: 2
+  Health: 5
+  Speed: 5
+  Damage: 1
   Fighting: 0
   FightDelay: 1
   DeathEffect: {fileID: 1625724900860004975, guid: 5ce25cd3d1c2f074d96ce488fab2a630,

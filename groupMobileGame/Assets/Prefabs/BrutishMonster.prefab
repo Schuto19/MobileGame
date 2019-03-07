@@ -146,13 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 2
-  Health: 8
-  Speed: 1
+  Health: 18
+  Speed: 1.25
   Damage: 4
   Fighting: 0
   FightDelay: 1
   DeathEffect: {fileID: 1625724900860004975, guid: 5ce25cd3d1c2f074d96ce488fab2a630,
     type: 3}
+  ShieldHealth: 14
+  ShieldEffect: {fileID: 0}
 --- !u!198 &1159550918
 ParticleSystem:
   m_ObjectHideFlags: 0

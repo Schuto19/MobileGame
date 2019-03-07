@@ -28,7 +28,7 @@ public class MonsterScript : MonoBehaviour
     {
         Attacking = false;
 
-        if(Type == 2)
+        if(Type == 2 || Type == 4)
         {
             GameObject[] Towers = GameObject.FindGameObjectsWithTag("Tower");
             float ClosestRange = 2.5f;

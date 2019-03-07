@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lifetime: 10
-  Damage: 6
+  Damage: 7
   Velocity: 30
   Piercing: 1
   ShieldDamageEffect: {fileID: 634250226759017814, guid: 57d91ce9fdfa711458a0a32b98198174,

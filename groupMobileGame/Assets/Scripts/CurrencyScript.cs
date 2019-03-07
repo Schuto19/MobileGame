@@ -18,7 +18,17 @@ public class CurrencyScript : MonoBehaviour
     void Update()
     {
         CurrencyGrowthDelay += Time.deltaTime;
-        if(CurrencyGrowthDelay >= .5f)
+        if(CurrencyGrowthDelay >= .5f && GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 0)
+        {
+            Currency += 1;
+            CurrencyGrowthDelay = 0;
+        }
+        else if(CurrencyGrowthDelay >= 1f && GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 1)
+        {
+            Currency += 1;
+            CurrencyGrowthDelay = 0;
+        }
+        else if(CurrencyGrowthDelay >= 1.5f && GameObject.Find("DifficultyEmpty").GetComponent<DifficultyScript>().DifficultyLevel == 2)
         {
             Currency += 1;
             CurrencyGrowthDelay = 0;
