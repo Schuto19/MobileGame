@@ -5,24 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MenuBottons : MonoBehaviour {
 
-    public void NewGame()
-    {
-        
-        SceneManager.LoadScene("level1");
-    }
-
     public void QuitGame()
     {
         Application.Quit();
     }
 
-    public void Controls()
-    {
-        SceneManager.LoadScene("Options");
-    }
-
-    public void Continue()
+    public void Begin()
     {
         SceneManager.LoadScene("difficultySelect");
+    }
+
+    public void ReturnToMain()
+    {
+        SceneManager.LoadScene("mainMenu");
     }
 }

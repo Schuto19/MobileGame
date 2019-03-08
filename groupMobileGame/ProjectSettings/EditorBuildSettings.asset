@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/mainMenu.unity
     guid: d9d912cde6fc97b47ad4cd1347de4017
   - enabled: 1
     path: Assets/Scenes/difficultySelect.unity
@@ -16,41 +16,68 @@ EditorBuildSettings:
     guid: cd9991fee7d91844fae14e7ec76dfd37
   - enabled: 1
     path: Assets/Scenes/levelSelectH.unity
-    guid: b80e92eb1fd5c874c96d68647e4de575
+    guid: cf4ed0d663fb608448c2ce9c8dc88402
   - enabled: 1
     path: Assets/Scenes/levelSelectL.unity
-    guid: e0725a68c4b8c3442aeeabf28c320dff
+    guid: 85552ca4b8ec2524bbffd0e9bb43d668
   - enabled: 1
     path: Assets/Scenes/Level1N.unity
-    guid: ea8ca9c3ea6a193428627f4dc64602fe
-  - enabled: 1
-    path: Assets/Scenes/Level2N.unity
-    guid: 8637b7e1e49053144830c8deb4b2073c
-  - enabled: 1
-    path: Assets/Scenes/Level3N.unity
-    guid: 331a16a73ee7a7d4a99165aeba6854d2
+    guid: 65de41144cea99a4ab019f32e9ad40b6
   - enabled: 1
     path: Assets/Scenes/Level1H.unity
     guid: 256dfa721c13b3144a6e2502a8e3924e
   - enabled: 1
-    path: Assets/Scenes/Level2H.unity
-    guid: 794d543639ec6724f90a4897ae826454
-  - enabled: 1
-    path: Assets/Scenes/Level3H.unity
-    guid: e4928fdcfc2044f4f9dc6d83f03fe281
-  - enabled: 1
     path: Assets/Scenes/Level1L.unity
-    guid: b26cdb75ec727124d872f934845bb4a1
+    guid: 566d6fe17d1646d4cb4b01a372fafe2c
+  - enabled: 1
+    path: Assets/Scenes/Level2N.unity
+    guid: 8c822d84e37f3984f95728cb5a9abbe6
+  - enabled: 1
+    path: Assets/Scenes/Level2H.unity
+    guid: a97b12d8048a69a4db1a305c401f45da
   - enabled: 1
     path: Assets/Scenes/Level2L.unity
-    guid: 9576e27895c27e043952e39645d6d157
+    guid: f6905ec6f3cce8e4eac74a22227faae1
+  - enabled: 1
+    path: Assets/Scenes/Level3N.unity
+    guid: a1d7a2ccb46b83940831a9fc7f90f8e8
+  - enabled: 1
+    path: Assets/Scenes/Level3H.unity
+    guid: 3713a3f0069006a4884f4dcdb20f7f72
   - enabled: 1
     path: Assets/Scenes/Level3L.unity
-    guid: fedd017079616164699cc9e35bd249e3
-  - enabled: 0
-    path: Assets/Scenes/lose.unity
-    guid: cb1423f8afa7a4947a7ab3c496dfc768
-  - enabled: 0
+    guid: 3c4b8aaab00d44141aa34e0311a82276
+  - enabled: 1
     path: Assets/Scenes/win.unity
     guid: 57ba4c25988839745bf27e3b07429dd4
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
