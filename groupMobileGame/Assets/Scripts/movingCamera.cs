@@ -5,7 +5,7 @@ using UnityEngine;
 public class movingCamera : MonoBehaviour
 {
     public float panSpeed = 20f;
-    public float panBorderThickness = 10f;
+    public float panBorderThickness = 50f;
     public Vector2 panLimit;
 
     // Update is called once per frame

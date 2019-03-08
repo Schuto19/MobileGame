@@ -837,36 +837,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1616569595, guid: 5fad3a4accc1b014da8fba1c1ed9f957, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1616569595, guid: 5fad3a4accc1b014da8fba1c1ed9f957, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1616569595, guid: 5fad3a4accc1b014da8fba1c1ed9f957, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1616569595, guid: 5fad3a4accc1b014da8fba1c1ed9f957, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1616569595, guid: 5fad3a4accc1b014da8fba1c1ed9f957, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1616569594, guid: 5fad3a4accc1b014da8fba1c1ed9f957, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5251293723826354301, guid: 5fad3a4accc1b014da8fba1c1ed9f957,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b6fe841e143e94d44a3653cba6dca491,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fad3a4accc1b014da8fba1c1ed9f957, type: 3}
 --- !u!1 &519420028
@@ -909,7 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panSpeed: 20
-  panBorderThickness: 10
+  panBorderThickness: 50
   panLimit: {x: 0, y: 15}
 --- !u!20 &519420031
 Camera:
@@ -1035,47 +1005,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
-    - target: {fileID: 3315898787843929961, guid: 298ce7f210497c04982e83f628d8cb53,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3315898788615897681, guid: 298ce7f210497c04982e83f628d8cb53,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3315898788615897681, guid: 298ce7f210497c04982e83f628d8cb53,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.715242
-      objectReference: {fileID: 0}
-    - target: {fileID: 3315898788615897681, guid: 298ce7f210497c04982e83f628d8cb53,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3315898787677402979, guid: 298ce7f210497c04982e83f628d8cb53,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3315898787677402979, guid: 298ce7f210497c04982e83f628d8cb53,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3315898787677402979, guid: 298ce7f210497c04982e83f628d8cb53,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3315898787677402979, guid: 298ce7f210497c04982e83f628d8cb53,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300002, guid: b6fe841e143e94d44a3653cba6dca491,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 298ce7f210497c04982e83f628d8cb53, type: 3}
 --- !u!1001 &697114563
@@ -2075,11 +2004,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1372800182}
-    - target: {fileID: 443379535148283529, guid: a80309f77dc1ead44a11fdb95f3faf4c,
-        type: 3}
-      propertyPath: Currency
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a80309f77dc1ead44a11fdb95f3faf4c, type: 3}
 --- !u!1001 &2117505182

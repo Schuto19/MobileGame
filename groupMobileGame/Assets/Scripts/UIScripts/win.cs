@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class win : MonoBehaviour {
 
 
-     void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.gameObject.tag == "Win")
+        if(GameObject.Find("EnemyBase").GetComponent<EnemyBase>().Ending == true)
         {
-            SceneManager.LoadScene("Win");
+            GetComponent<Canvas>().enabled = true;
         }
     }
+
 }

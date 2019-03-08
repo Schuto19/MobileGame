@@ -13,7 +13,7 @@ public class EnemyBase : MonoBehaviour
     public GameObject EnemyUnit1;
     public GameObject EnemyUnit2;
     public GameObject EnemyUnit3;
-    bool Ending = false;
+    public bool Ending = false;
     float EndTimer = 2;
 
     // Start is called before the first frame update

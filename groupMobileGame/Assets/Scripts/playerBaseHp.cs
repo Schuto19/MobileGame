@@ -23,6 +23,7 @@ public class playerBaseHp : MonoBehaviour
         if (DamagedDelay <= 0 && Hp <= collision.gameObject.GetComponent<EnemyUnitScript>().Damage)
         {
             GameObject.Find("LoseCanvas").GetComponent<Canvas>().enabled = true;
+            GameObject.Find("MainCanvas").GetComponent<Canvas>().enabled = false;
             Time.timeScale = 0;
         }
     }

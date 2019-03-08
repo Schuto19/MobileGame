@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextLevelScript : MonoBehaviour
 {
@@ -14,5 +15,17 @@ public class NextLevelScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("DifficultySelect");
+        Time.timeScale = 1;
     }
 }
